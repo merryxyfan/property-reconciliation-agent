@@ -399,19 +399,17 @@ results          conflict reports
 
 ---
 
-# 10. Data Sources and Attribution
+# 10. Data Licensing
 
 This project uses publicly available UK government data from:
 
 * **HM Land Registry — Price Paid Data**
   [Official Price Paid Data Downloads](https://www.gov.uk/government/statistical-data-sets/price-paid-data-downloads?utm_source=chatgpt.com)
+  > Contains HM Land Registry data © Crown copyright and database right 2021. This data is licensed under the Open Government Licence v3.0.
 
 * **Energy Performance of Buildings — Bulk Data**
   [Official Energy Performance of Buildings Data Service](https://get-energy-performance-data.communities.gov.uk/?utm_source=chatgpt.com)
-
-HM Land Registry requires the following attribution when its Price Paid Data is used or published:
-
-> Contains HM Land Registry data © Crown copyright and database right 2021. This data is licensed under the Open Government Licence v3.0.
+  > This data is licensed under the Open Government Licence v3.0.
 
 See the official HM Land Registry guidance for permitted use and attribution requirements.
 
