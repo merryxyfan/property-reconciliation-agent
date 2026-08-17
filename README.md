@@ -408,7 +408,7 @@ reconciliation   find_conflicts
 _engine.py       .py
      ↓             ↓
 Specific         All matched
-postcode         properties
+property         properties
 investigation    conflict analysis
      ↓             ↓
 Reconciliation   Three CSV
