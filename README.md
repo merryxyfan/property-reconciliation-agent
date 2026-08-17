@@ -73,15 +73,13 @@ data/
 
 ---
 
-## 3. Create the Python Environment
-
-The project uses **Python 3.11.15**.
-
-Create the Conda environment:
+## 3. Setup
 
 ```bash
-conda create -n property-agent python=3.11.15
+git clone https://github.com/merryxyfan/property-reconciliation-agent.git
+cd property-reconciliation-agent
 
+conda create -n property-agent python=3.11.15
 conda activate property-agent
 
 pip install -r requirements.txt
