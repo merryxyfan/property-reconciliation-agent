@@ -1,0 +1,7 @@
+__pycache__/
+data/epc-2026.csv
+data/pp-2026.csv
+data/linked_properties.csv
+hmlr_old_new_vs_epc_construsction_age_conflicts.csv
+hmlr_property_type_vs_epc_built_form_conflicts.csv
+hmlr_property_type_vs_epc_property_type_conflicts.csv
