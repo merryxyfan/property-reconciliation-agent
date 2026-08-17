@@ -302,15 +302,35 @@ Construction Age Band = 2026
 
 combined with no earlier HMLR transaction provides strong evidence that the property may be expected to have an HMLR New (`Y`) classification.
 
+**Example postcode:**
+
+```text
+GU2 8LS
+Trasaction ID: 1
+```
+
 ### Rule 2 — Prior Transaction Evidence
 
 If an earlier HMLR transaction exists for the same property, the EPC `"New dwelling"` classification is treated as conflicting evidence, and HMLR is retained.
+
+**Example postcode:**
+
+```text
+GU2 8LS
+Trasaction ID: 2
+```
 
 ### Rule 3 — Weak New-Build Evidence
 
 A recent EPC Construction Age Band alone does not determine HMLR's Old/New classification.
 
 Therefore, this situation is flagged as a **weak conflict warning** rather than automatically changing the classification.
+
+**Example postcode:**
+
+```text
+S6 2WH
+```
 
 ---
 
@@ -412,3 +432,21 @@ This project uses publicly available UK government data from:
 See the official HM Land Registry and Energy Performance of Buildings guidance for permitted use and more information.
 
 ---
+
+# 11. Future Works
+
+Given more time and without the constraints of the current datasets, several directions could extend and strengthen this project:
+
+**Additional data sources.** Many of the current rules are limited by what HMLR and EPC alone can evidence. Incorporating additional free or public sources — for example, property listing platforms via web scraping or council tax banding data — would provide independent evidence for property type, built form, and construction age.
+
+**More conflict fields.** The current agent focuses on three conflicts (property type, built form, construction age). This could be extended to reconcile other fields that commonly disagree across sources, such as postcode-to-property matching accuracy, tenure (freehold/leasehold), floor area, or number of bedrooms/rooms. These fields are currently not verifiable because HMLR and EPC do not both independently record them (e.g. EPC records floor area and habitable rooms, but HMLR does not), so no two-source conflict can currently be formed — introducing additional datasets that independently record the missing side would make these fields verifiable and extend the reconciliation framework to cover them.
+
+**Confidence scoring instead of binary winner.** Rather than a single deterministic winner, each conflict resolution could output a confidence score (e.g. based on the strength/quantity of supporting evidence, such as the proportion of neighbouring properties agreeing), allowing downstream users to judge how much to trust a given reconciled field rather than treating all resolutions as equally certain.
+
+**Improved address matching.** The current linking between HMLR and EPC relies on exact-ish address/postcode matching. Fuzzy string matching or a dedicated address-matching library/API could reduce false negatives where the same property is recorded with slightly different address formatting across the two datasets, increasing the number of properties available for reconciliation.
+
+**Versioned reconciliation.** EPCs can be re-inspected and re-issued over time. Future work could track how a property's EPC record changes across multiple certificates over time (e.g. extensions, re-banding) and use this history as additional evidence — for instance, detecting whether a "New dwelling" EPC transaction type is consistent with subsequent EPC records for the same property.
+
+**LLM-assisted reasoning for ambiguous cases.** For Ambiguous/insufficient-evidence outcomes currently defaulting to HMLR as a transaction-prioritised agent, an LLM could be used to synthesise unstructured evidence (e.g. scraped listing descriptions, planning application text) into a structured judgement, with the reasoning still logged transparently alongside the rule-based decisions — keeping the system auditable rather than replacing the rule-based core entirely. This is not possible with the current datasets alone, since neither HMLR nor EPC contains this kind of unstructured text; it would require collecting additional data sources.
+
+**Web/UI interface.** The current agent runs as a command-line tool. A lightweight web interface could let non-technical users search by postcode, browse reconciled results interactively, and visualise conflict statistics across regions, making the tool more accessible for demonstration and real-world use.
