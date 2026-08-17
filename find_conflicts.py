@@ -295,6 +295,7 @@ def check_construction_age(hmlr_old_new, epc_construction_age_band, epc_transact
     # EPC construction_age_band describes the approximate construction period of the property, which does not directly determine HMLR's Old/New classification.
 
     # However, EPC transaction_type = "New dwelling" provides additional evidence that the property was newly constructed when EPC was lodged.
+    # Since the EPC data used in this project covers records available in 2026, this evidence can only support the property's new-build status around the 2026 EPC record; it cannot establish the property's status in earlier years.
     # Then no matter the HMLR transaction date is before or after EPC inspectation date, this is a strong evidence that the property should be marked as "Y" in HMLR. 
     # This is flagged under the assumption that HMLR PPD fully captures releveant prior transactions, the absence of earlier transactions further strengthens the evidence.
 
