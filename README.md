@@ -409,6 +409,6 @@ This project uses publicly available UK government data from:
   [Official Energy Performance of Buildings Data Service](https://get-energy-performance-data.communities.gov.uk/?utm_source=chatgpt.com)
   > This data is licensed under the Open Government Licence v3.0.
 
-See the official HM Land Registry guidance for permitted use and attribution requirements.
+See the official HM Land Registry and Energy Performance of Buildings guidance for permitted use and more information.
 
 ---
