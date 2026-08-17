@@ -42,7 +42,7 @@ Download the **2026 yearly CSV file** from the official HM Land Registry Price P
 
 [HM Land Registry — Price Paid Data Downloads](https://www.gov.uk/government/statistical-data-sets/price-paid-data-downloads?utm_source=chatgpt.com)
 
-* Use the **2026 yearly data**.
+* Use the **2026 Yearly File data**.
 
 The yearly files contain standard and additional Price Paid Data transactions for the relevant calendar year.
 
