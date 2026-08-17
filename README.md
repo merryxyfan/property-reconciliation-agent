@@ -304,7 +304,7 @@ combined with no earlier HMLR transaction provides strong evidence that the prop
 
 ```text
 GU2 8LS
-Trasaction ID: 1
+Trasaction ID: 2
 ```
 
 ### Rule 2 — Prior Transaction Evidence
@@ -315,7 +315,7 @@ If an earlier HMLR transaction exists for the same property, the EPC `"New dwell
 
 ```text
 GU2 8LS
-Trasaction ID: 2
+Trasaction ID: 1
 ```
 
 ### Rule 3 — Weak New-Build Evidence
