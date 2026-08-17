@@ -59,7 +59,7 @@ The official service provides bulk EPC certificate data in CSV format for domest
 * Use **Domestic EPC data only**
 * Retain EPC records from **January 2026 onwards**
 
-The EPC data covers certificates registered since 2012 and includes both existing and new domestic dwellings.
+The EPC data covers certificates registered and includes both existing and new domestic dwellings.
 
 ### 2.3 Data Directory
 
