@@ -52,9 +52,7 @@ Download the **Domestic EPC bulk data** from the official government service:
 
 [Get Energy Performance of Buildings Data](https://get-energy-performance-data.communities.gov.uk/?utm_source=chatgpt.com)
 
-Select the **Domestic** EPC data.
-
-The official service provides bulk EPC certificate data in CSV format for domestic and non-domestic properties in England and Wales. A GOV.UK One Login account is required to access the bulk downloads.
+A GOV.UK One Login account is required to access the bulk downloads.
 
 * Use **Domestic EPC data only**
 * Retain EPC records from **January 2026 onwards**
