@@ -326,13 +326,7 @@ Run:
 python find_conflicts.py
 ```
 
-This processes **all matched properties** in:
-
-```text
-data/linked_properties.csv
-```
-
-and applies all three conflict-checking functions.
+This processes all matched properties and applies all three conflict-checking functions.
 
 The script reports the total number of matched properties and conflicts for each category:
 
@@ -372,30 +366,6 @@ hmlr_old_new_vs_epc_construction_age_conflicts.csv
 ```
 
 Contains all detected **Construction Age / New-Build** conflicts and warnings.
-
----
-
-# 8. Two Ways to Use the System
-
-### Interactive property investigation
-
-Use:
-
-```bash
-python reconciliation_engine.py
-```
-
-Recommended when you want to investigate a **specific property by postcode**, inspect its records, and see the reasoning behind the reconciliation.
-
-### Batch conflict analysis
-
-Use:
-
-```bash
-python find_conflicts.py
-```
-
-Recommended when you want to process **all matched properties** and generate CSV reports containing all detected conflicts.
 
 ---
 
@@ -446,18 +416,3 @@ HM Land Registry requires the following attribution when its Price Paid Data is 
 See the official HM Land Registry guidance for permitted use and attribution requirements.
 
 ---
-
-# 11. Requirements
-
-* Python 3.11.15
-* Conda
-* pandas
-* Other dependencies listed in `requirements.txt`
-
-Create and activate the environment with:
-
-```bash
-conda create -n property-agent python=3.11.15
-conda activate property-agent
-pip install -r requirements.txt
-```
